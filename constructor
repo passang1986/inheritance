@@ -1,0 +1,76 @@
+public class Teachers {
+    public static void main(String[] args) {
+
+        ScienceTeacher s = new ScienceTeacher();
+
+
+        s.grades();
+        s.test();
+        s.homeWork();
+        s.science();
+
+        HistoryTeacher h = new HistoryTeacher();
+
+
+        h.grades();
+        h.test();
+        h.homeWork();
+        h.history();
+
+    }
+
+    }
+
+
+    class ScienceTeacher {
+        char gender;
+        String name;
+        int age;
+
+        ScienceTeacher() {
+            System.out.println("science Teacher constructor... ");
+        }
+
+        void test() {
+            System.out.println("gives test...");
+        }
+
+        void grades() {
+            System.out.println("grades test...");
+        }
+
+        void homeWork() {
+            System.out.println("gives home work...");
+        }
+
+        void science() {
+            System.out.println("teaches science");
+        }
+    }
+       class HistoryTeacher extends ScienceTeacher
+       {
+            int history;
+
+           public HistoryTeacher(int history) {
+               this.history = history;
+           }
+
+           HistoryTeacher(){
+            System.out.println("history teacher constructor");
+           }
+           void test() {
+               System.out.println("gives test...");
+           }
+
+           void grades() {
+               System.out.println("grades test...");
+           }
+
+           void homeWork() {
+               System.out.println("gives home work...");
+           }
+
+           void history() {
+               System.out.println("teaches history");
+           }
+           }
